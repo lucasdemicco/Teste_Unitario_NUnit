@@ -134,16 +134,14 @@ namespace ContaTeste
         #region Parametrizando Testes
         [Test]
         //Cria um ou mais teste case, executando cada case e verificando se ele passa no teste
-        [TestCase(-850)]
-        [TestCase(-750)]
-        [TestCase(-550)]
-        [TestCase(-4710)]
+        [TestCase(-850, false)]
+        [TestCase(100, true)]
         [Category("Parametrização de Testes")]
-        public void TesteUsandoParametrizacao(int valor)
+        public void TesteUsandoParametrizacao(int valor, bool resultadoEsperado)
         {
             bool resultado = conta.Sacar(valor);
 
-            Assert.IsFalse(resultado);
+            Assert.IsFalse(resultadoEsperado);
         }
 
         #endregion
