@@ -22,9 +22,9 @@ namespace BancoExemplo.Model
 
         public bool Sacar(decimal valor)
         {
-            if (Saldo < valor)
+            if (Saldo <= valor)
             {
-                return false;
+                throw new ArgumentOutOfRangeException();
             }
 
             this.Saldo -= valor;

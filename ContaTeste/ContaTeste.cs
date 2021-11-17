@@ -113,5 +113,13 @@ namespace ContaTeste
 
         #endregion
 
+        #region Teste de Exceptions
+        [Test]
+        [Category("Exceptions")]
+        public void TesteDeExceptions()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(delegate { conta.Sacar(-100); });
+        }
+        #endregion
     }
 }
