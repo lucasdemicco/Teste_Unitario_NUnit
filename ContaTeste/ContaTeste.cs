@@ -145,5 +145,17 @@ namespace ContaTeste
         }
 
         #endregion
+
+        #region Testando TimeOuts
+        [Test]
+        [Category("Testando TimeOut, falhando caso ele demore muito na execução")]
+        [TestCase(false)]
+        [Timeout(4000)] // tempo avaliado em milisegundos (4000 = 4 segs)
+        //Se o NUnit passar de 4 segundos ele cancela o teste
+        public void TesteTimeOut(bool resultadoEsperado)
+        {
+            Assert.IsFalse(resultadoEsperado);
+        }
+        #endregion
     }
 }

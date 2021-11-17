@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BancoExemplo.Model
@@ -22,6 +23,9 @@ namespace BancoExemplo.Model
 
         public bool Sacar(decimal valor)
         {
+
+            Thread.Sleep(5000);
+
             if (Saldo <= valor)
             {
                 throw new ArgumentOutOfRangeException();
