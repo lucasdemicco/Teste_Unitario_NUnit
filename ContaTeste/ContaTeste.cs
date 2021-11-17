@@ -118,7 +118,11 @@ namespace ContaTeste
         [Category("Exceptions")]
         public void TesteDeExceptions()
         {
+            //Só valida se a exceção for exatamente o argumento passado
             Assert.Throws<ArgumentOutOfRangeException>(delegate { conta.Sacar(-100); });
+
+            //Também pode ser usado Assert.Catch -> Valida a exception atual ou exceptions acima de sua hierarquia
+            //Assert.Catch<ArgumentOutOfRangeException>(delegate { conta.Sacar(-50) });
         }
         #endregion
     }
