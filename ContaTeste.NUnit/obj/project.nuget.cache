@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "PsRkE0oTsuYRtU9ZNQn65AZuzw3ajcCD3M3y8GKzhcO6RjmVkVxg7WRIBbyzLd+fnmlcy8PZJvs/v7JO/Vo/Wg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\camil\\Desktop\\TesteUnitario\\BancoExemplo\\ContaTeste.NUnit\\ContaTeste.NUnit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\camil\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\camil\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\camil\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512",
+    "C:\\Users\\camil\\.nuget\\packages\\nunit3testadapter\\4.1.0\\nunit3testadapter.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
