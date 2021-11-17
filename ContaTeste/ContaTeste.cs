@@ -40,6 +40,8 @@ namespace ContaTeste
 
         #endregion
 
+        #region Principal
+
         [Test]
         public void TestSacar()
         {
@@ -94,6 +96,9 @@ namespace ContaTeste
 
         }
 
+        #endregion
+
+
         #region Atribuindo Teste Categorizado
         [Test]
         [Category("Valores inválidos")]
@@ -124,6 +129,23 @@ namespace ContaTeste
             //Também pode ser usado Assert.Catch -> Valida a exception atual ou exceptions acima de sua hierarquia
             //Assert.Catch<ArgumentOutOfRangeException>(delegate { conta.Sacar(-50) });
         }
+        #endregion
+
+        #region Parametrizando Testes
+        [Test]
+        //Cria um ou mais teste case, executando cada case e verificando se ele passa no teste
+        [TestCase(-850)]
+        [TestCase(-750)]
+        [TestCase(-550)]
+        [TestCase(-4710)]
+        [Category("Parametrização de Testes")]
+        public void TesteUsandoParametrizacao(int valor)
+        {
+            bool resultado = conta.Sacar(valor);
+
+            Assert.IsFalse(resultado);
+        }
+
         #endregion
     }
 }
